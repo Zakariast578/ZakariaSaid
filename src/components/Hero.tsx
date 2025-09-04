@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { motion, useScroll, useTransform } from 'framer-motion';
 import { ArrowDown, Github, Linkedin, Twitter, Sparkles, Code2, Palette } from 'lucide-react';
 import { Button } from '@/components/ui/button';
@@ -21,8 +21,7 @@ const headlineVariants = {
     opacity: 1,
     y: 0,
     transition: { 
-      duration: 0.8, 
-      ease: [0.25, 0.46, 0.45, 0.94] 
+      duration: 0.8,
     },
   },
 };
@@ -35,7 +34,6 @@ const subtitleVariants = {
     transition: { 
       duration: 0.8, 
       delay: 0.4,
-      ease: [0.25, 0.46, 0.45, 0.94] 
     },
   },
 };
@@ -46,7 +44,7 @@ const buttonVariants = {
     opacity: 1,
     scale: 1,
     transition: { 
-      type: "spring",
+      type: "spring" as const,
       stiffness: 200,
       damping: 20,
       delay: 0.6
